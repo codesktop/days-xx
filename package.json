@@ -1,0 +1,13 @@
+{
+  "name": "days",
+  "version": "1.0.1",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "dayjs": "^1.10.4",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "fs-extra": "^9.1.0"
+  }
+}
