@@ -1,13 +1,15 @@
 {
-  "name": "days",
+  "name": "days-xx",
   "version": "1.0.1",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "dayjs": "^1.10.4",
+    "dayjs": "^1.11.2",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "@types/node": "^17.0.40",
+    "@vercel/node": "^2.0.0",
     "fs-extra": "^9.1.0"
   }
 }
