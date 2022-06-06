@@ -9,7 +9,7 @@ export default async (request: VercelRequest, response: VercelResponse) => {
     .sort()
     .map((date) => {
       const name = data[date]
-      const count = dayjs(date).diff(today) / 86400000
+      const count = dayjs(date).diff(today) / 86_400_000
 
       return {
         name,
