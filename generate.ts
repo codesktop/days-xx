@@ -1,6 +1,7 @@
-const { outputJsonSync } = require('fs-extra')
-const range = require('lodash/range')
-const dayjs = require('dayjs')
+import { outputJsonSync } from 'fs-extra'
+import range from 'lodash/range'
+import dayjs from 'dayjs'
+
 const data = {}
 const days = {
   春节: [
@@ -53,7 +54,9 @@ function normalize() {
   }
 
   for (const name of Object.keys(days)) {
-    days[name] = days[name].map((date) => dayjs(date).format('YYYY-MM-DD'))
+    days[name] = days[name].map((date: string) =>
+      dayjs(date).format('YYYY-MM-DD')
+    )
 
     for (const date of days[name]) {
       data[date] = name
