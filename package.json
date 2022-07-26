@@ -7,8 +7,6 @@
     "dayjs": "^1.11.4"
   },
   "devDependencies": {
-    "@types/node": "^18.0.6",
-    "@vercel/node": "^2.4.4",
-    "typescript": "^4.7.4"
+    "@vercel/node": "^1.15.4"
   }
 }
