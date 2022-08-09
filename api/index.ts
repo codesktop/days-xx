@@ -1,14 +1,14 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import dayjs from '../lib/dayjs'
-import data from '../days.json'
+import days from '../days.json'
 
 export default async (request: VercelRequest, response: VercelResponse) => {
   const today = dayjs().startOf('day')
-  const result = Object.keys(data)
+  const data = Object.keys(days)
     .filter((date) => dayjs(date).isBetween(today, today.add(1, 'year')))
     .sort()
     .map((date) => {
-      const name = data[date]
+      const name = days[date] as string
       const count = dayjs(date).diff(today) / 86_400_000
 
       return {
@@ -19,5 +19,5 @@ export default async (request: VercelRequest, response: VercelResponse) => {
       }
     })
 
-  return response.json(result)
+  return response.json(data)
 }
