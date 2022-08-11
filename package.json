@@ -2,7 +2,6 @@
   "name": "days-xx",
   "version": "1.0.1",
   "license": "MIT",
-  "private": true,
   "dependencies": {
     "dayjs": "^1.11.4"
   },
